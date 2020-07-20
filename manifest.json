@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Dynamic Extension",
+	"version": "2.0",
+	"description":"Extenção com o objetivo de ser uma ferramenta para Desenvolvedores e Testers da Empresa Flexy.\nNa versão 1.0 Estão adicionadas as classes de criação de:\n  · User: 'new User(name, password)', serve para a criação de usuários secundarios em Customers PJ.\n  · PF: 'new PF(name, password)', serve para a criação de usuários do tipo Pessoa Física.\n  · PJ: 'new PJ(name, password)', serve para a criação de usuários do tipo Pessoa Jurídica.\n  · Agent: 'new Agent(name, password)', serve para a criação de usuários do tipo Representante (Apenas funciona no em '*/flexyadmin').\n  · Admin: 'new Admin(name, password)', serve para a criação de usuários do tipo Administrador (Apenas funciona no em '*/flexyadmin').",
+	"permissions": [
+		"activeTab"
+	],
+	"content_scripts": [{
+		"matches": [
+			"https://*/*"
+		],
+		"js": [
+			"content.js"
+		]
+	}],
+	"web_accessible_resources":["/*"]
+}
